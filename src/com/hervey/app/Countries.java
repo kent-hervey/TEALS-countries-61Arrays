@@ -23,23 +23,34 @@ public class Countries{
 	    country.printHTMLimage("China.jpg");
 	  
 	  
-   }
+
 
    // This method will just work in Active Code which interprets html
-   int numberOfCountries = 10;
-   
-   
-   
+  
+  	String[] countryNames = {"China", "Egypt", "France", "Germany", "India", "Japan", "Kenya", "Mexico", "United Kingdom", "United States"};
+  	String[] countryCapitals = {"Beijing", "Cairo", "Paris", "Berlin", "New Delhi", "Tokyo", "Nairobi", "Mexico City", "London", "Washington D.C."};
+  	String[] countryLanguages = {"Chinese", "Arabic", "French", "German", "Hindi", "Japanese", "Swahili", "Spanish", "English", "English"};
+  	String[] countryMapFilenames = {"China.jpg", "Egypt.jpg", "France.jpg", "Germany", "India.jpg", "Japan.jpg", "Mexico.jpg", "UK.jpg", "US.jpg"};
+
    int index =1;
 
-  
+     country.outputCountryInformation(index, countryNames[index], countryCapitals[index], countryLanguages[index], countryMapFilenames[index]);
+     
+  }
+   
    public String printHTMLimage(String filename)
    {
      String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
      return "<img src=" + baseURL + filename + ">";
    }
    
-   public void outputCountryInformation(int indexCountry) {
+   public void outputCountryInformation(int indexCountry, String  countryName, String countryCapital, String countryLanguage, String mapFileName) {
+	   System.out.println("This country's index is:  " + indexCountry);
+	   System.out.println("This country's capital is:  " + countryCapital);
+	   System.out.println("This country's language is:  " + countryLanguage);
+	   System.out.println("This country's map html source tag is:  " + this.printHTMLimage(mapFileName));
+
+	   
 	   
 	   
    }
