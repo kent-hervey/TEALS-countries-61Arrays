@@ -34,7 +34,9 @@ public class Countries {
 		String[] countryCapitals = { "Beijing", "Cairo", "Paris", "Berlin", "New Delhi", "Tokyo", "Nairobi", "Mexico City", "London", "Washington D.C." };
 		String[] countryLanguages = { "Chinese", "Arabic", "French", "German", "Hindi", "Japanese", "Swahili", "Spanish", "English", "English" };
 		String[] countryMapFilenames = { "China.jpg", "Egypt.jpg", "France.jpg", "Germany", "India.jpg", "Japan.jpg", "Kenya", "Mexico.jpg", "UK.jpg", "US.jpg" };
-
+		Integer[] countryPopulation = {55,66,77,88,99,22,11,21,32,43};
+		
+		
 //		 testing arrays are full and same length
 //		 System.out.println(countryNames.length==countryCapitals.length &&
 //		 countryCapitals.length==countryLanguages.length &&
@@ -49,7 +51,7 @@ public class Countries {
 			System.out.println();
 		}
 */
-		country.outputCountryInformation(index, countryNames[index], countryCapitals[index], countryLanguages[index], countryMapFilenames[index]);
+		country.outputCountryInformation(index, countryNames[index], countryCapitals[index], countryLanguages[index], countryPopulation[index]);
 
 	}
 
@@ -63,11 +65,11 @@ public class Countries {
 		return "<img src=" + baseURL + filename + ">";
 	}
 
-	public void outputCountryInformation(int indexCountry, String countryName, String countryCapital, String countryLanguage, String mapFileName) {
+	public void outputCountryInformation(int indexCountry, String countryName, String countryCapital, String countryLanguage, Integer countryPopulation) {
 		System.out.println("This country's index is:  " + indexCountry);
 		System.out.println("This country's capital is:  " + countryCapital);
 		System.out.println("This country's language is:  " + countryLanguage);
-		System.out.println("This country's map html source tag is:  " + this.printHTMLimage(mapFileName));
+		System.out.println("This country's population is:  " + countryPopulation);
 
 	}
 
