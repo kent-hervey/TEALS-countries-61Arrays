@@ -26,14 +26,14 @@ public class Countries {
 		// obj.printHTMLimage( images[index] );
 
 		Countries country = new Countries();
-		country.printHTMLimage("China.jpg");
+//		country.printHTMLimage("China.jpg");
 
 		// This method will just work in Active Code which interprets html
 
 		String[] countryNames = { "China", "Egypt", "France", "Germany", "India", "Japan", "Kenya", "Mexico", "United Kingdom", "United States" };
 		String[] countryCapitals = { "Beijing", "Cairo", "Paris", "Berlin", "New Delhi", "Tokyo", "Nairobi", "Mexico City", "London", "Washington D.C." };
 		String[] countryLanguages = { "Chinese", "Arabic", "French", "German", "Hindi", "Japanese", "Swahili", "Spanish", "English", "English" };
-		String[] countryMapFilenames = { "China.jpg", "Egypt.jpg", "France.jpg", "Germany", "India.jpg", "Japan.jpg", "Kenya", "Mexico.jpg", "UK.jpg", "US.jpg" };
+//		String[] countryMapFilenames = { "China.jpg", "Egypt.jpg", "France.jpg", "Germany", "India.jpg", "Japan.jpg", "Kenya", "Mexico.jpg", "UK.jpg", "US.jpg" };
 		Integer[] countryPopulation = {55,66,77,88,99,22,11,21,32,43};
 		
 		
@@ -46,11 +46,11 @@ public class Countries {
 		int index = fetchRandomIndex(lengthArray);
 
 		// testing output proper for all countries
-/*		for (int i = 0; i < lengthArray; i++) {
-			country.outputCountryInformation(i, countryNames[i], countryCapitals[i], countryLanguages[i], countryMapFilenames[i]);
+		for (int i = 0; i < lengthArray; i++) {
+			country.outputCountryInformation(i, countryNames[i], countryCapitals[i], countryLanguages[i], countryPopulation[i]);
 			System.out.println();
 		}
-*/
+
 		country.outputCountryInformation(index, countryNames[index], countryCapitals[index], countryLanguages[index], countryPopulation[index]);
 
 	}
@@ -60,10 +60,10 @@ public class Countries {
 		return (int) ((Math.random() * (max - min)) + min);
 	}
 
-	public String printHTMLimage(String filename) {
-		String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
-		return "<img src=" + baseURL + filename + ">";
-	}
+//	public String printHTMLimage(String filename) {
+//		String baseURL = "https://raw.githubusercontent.com/bhoffman0/CSAwesome/master/_sources/Unit6-Arrays/6-1-images/";
+//		return "<img src=" + baseURL + filename + ">";
+//	}
 
 	public void outputCountryInformation(int indexCountry, String countryName, String countryCapital, String countryLanguage, Integer countryPopulation) {
 		System.out.println("This country's index is:  " + indexCountry);
